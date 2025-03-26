@@ -20,8 +20,8 @@ class ViewController: UIViewController {
         
         let dice = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")]
         
-        diceImageView1.image = dice[Int.random(in: 0..<dice.count)]
-        diceImageView2.image = dice[Int.random(in: 0..<dice.count)]
+        diceImageView1.image = dice[Int.random(in: diceNumber.startIndex..<diceNumber.endIndex)]
+        diceImageView2.image = dice[Int.random(in: diceNumber.startIndex..<diceNumber.endIndex)]
         
        
         
