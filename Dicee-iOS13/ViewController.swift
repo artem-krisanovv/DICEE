@@ -9,12 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var diceImageView1: UIImageView!
+    @IBOutlet weak var diceImageView2: UIImageView!
+    
+    var diceNumber = [0...5]
+    
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        
+        let dice = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"),#imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")]
+        
+        diceImageView1.image = dice[Int.random(in: 0..<dice.count)]
+        diceImageView2.image = dice[Int.random(in: 0..<dice.count)]
+        
+       
+        
     }
-
-
 }
 
