@@ -24,10 +24,10 @@ class ViewController: UIViewController {
         isRolling.toggle()
         
         if isRolling {
-            rollButton.setTitle("Stop Rolling!", for: .normal)
+            rollButton?.setTitle("Stop Rolling!", for: .normal)
             startRolling()
         } else {
-            rollButton.setTitle("Roll", for: .normal)
+            rollButton?.setTitle("Roll", for: .normal)
             stopRolling()
         }
     }
